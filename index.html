@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DebtFix - Clear Your Debt</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="text-center mb-4">
+      <h1 class="display-4">DebtFix</h1>
+      <p class="lead">Calculate your monthly surplus and see how long it will take to clear your debt!</p>
+    </div>
+
+    <div class="card p-4 mb-4 shadow-lg">
+      <h2 class="mb-3">Monthly Income</h2>
+      <div class="input-group mb-3">
+        <input type="number" id="income" class="form-control" placeholder="Enter your monthly income (e.g., 2500)" aria-label="Monthly Income">
+      </div>
+
+      <h2 class="mb-3">Monthly Expenses</h2>
+      <div class="form-group">
+        <label>Rent:</label>
+        <input type="number" id="rent" class="form-control mb-2" placeholder="Enter rent expense">
+        
+        <label>Utilities:</label>
+        <input type="number" id="utilities" class="form-control mb-2" placeholder="Enter utilities expense">
+        
+        <label>Transport:</label>
+        <input type="number" id="transport" class="form-control mb-2" placeholder="Enter transport expense">
+        
+        <label>Insurance:</label>
+        <input type="number" id="insurance" class="form-control mb-2" placeholder="Enter insurance expense">
+        
+        <label>Miscellaneous:</label>
+        <input type="number" id="misc" class="form-control mb-2" placeholder="Enter miscellaneous expense">
+      </div>
+
+      <h2 class="mb-3">Debt</h2>
+      <div class="input-group mb-3">
+        <input type="number" id="debt" class="form-control" placeholder="Enter your total debt amount" aria-label="Total Debt">
+      </div>
+
+      <h2 class="mb-3">Additional Expenses</h2>
+      <div id="additional-expenses" class="mb-2"></div>
+      <div class="input-group mb-3">
+        <input type="text" id="new-expense-name" class="form-control" placeholder="Expense Name">
+        <input type="number" id="new-expense-amount" class="form-control" placeholder="Amount">
+        <div class="input-group-append">
+          <button id="add-expense-button" class="btn btn-outline-primary">Add Expense</button>
+        </div>
+      </div>
+
+      <button id="calculateButton" class="btn btn-primary btn-lg btn-block mt-4">Calculate Surplus and Debt Payment Time</button>
+    </div>
+
+    <div id="result" class="alert alert-success mt-4 d-none"></div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

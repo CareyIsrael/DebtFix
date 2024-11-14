@@ -1,0 +1,14 @@
+{
+    "name": "my-interactive-website",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "A fun interactive website",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.18.0"
+    }
+  }
+  
